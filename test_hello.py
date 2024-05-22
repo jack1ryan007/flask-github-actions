@@ -7,7 +7,6 @@ class TestHelloWorld(unittest.TestCase):
         self.client = app.test_client()
 
     def test_hello_world(self):
-        return
         response = self.client.get('/')
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'Hello, World!', response.data)
